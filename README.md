@@ -1,4 +1,3 @@
-````md
 # 💼 Expense Submission & Review System
 
 A Laravel-based prototype tool for employees to submit expenses and for admins to review, filter, approve, or reject them. Includes both a user-facing UI and RESTful APIs.
