@@ -8,7 +8,7 @@ class Receipt extends Model
 {
     protected $table = 'receipts';
 
-    protected $fillable = ['file_path'];
+    protected $fillable = ['expense_id', 'file_path'];
 
     public function expense()
     {
