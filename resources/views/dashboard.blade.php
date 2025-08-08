@@ -28,7 +28,7 @@
 
 
         <div class="bg-white shadow rounded p-4">
-            @if ($user->role == '0')
+            {{-- @if ($user->role == '0') --}}
                 <form method="GET" action="{{ route('dashboard') }}" class="mb-4">
                     <label for="status" class="mr-2 font-medium">Filter by Status:</label>
                     <select name="status" id="status" onchange="this.form.submit()" class="border rounded px-3 py-1">
@@ -38,7 +38,7 @@
                         <option value="rejected" {{ request('status') == 'rejected' ? 'selected' : '' }}>Rejected</option>
                     </select>
                 </form>
-            @endif
+            {{-- @endif --}}
             <table class="w-full text-left border">
                 <thead>
                     <tr>

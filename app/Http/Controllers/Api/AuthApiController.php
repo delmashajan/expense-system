@@ -21,7 +21,7 @@ class AuthApiController extends Controller
                 'email' => ['The provided credentials are incorrect.'],
             ]);
         }
-
+        /** @var \App\Models\User $user */
         $user = Auth::user();
 
         $token = $user->createToken('api-token')->plainTextToken;
