@@ -74,10 +74,6 @@ class ExpenseApiController extends Controller
 
     public function approve(Expense $expense)
     {
-        if (Auth::user()->role !== 0) {
-            return response()->json(['error' => 'Unauthorized'], 403);
-        }
-
         $expense->update(['status' => 'approved']);
 
         return response()->json([
@@ -88,10 +84,6 @@ class ExpenseApiController extends Controller
 
     public function reject(Expense $expense)
     {
-        if (Auth::user()->role !== 0) {
-            return response()->json(['error' => 'Unauthorized'], 403);
-        }
-
         $expense->update(['status' => 'rejected']);
 
         return response()->json([
