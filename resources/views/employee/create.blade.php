@@ -25,10 +25,9 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
                         Title
                     </label>
-                    <input name="title" type="text" id="title"
-                           value="{{ old('title') }}"
-                           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                           required>
+                    <input name="title" type="text" id="title" value="{{ old('title') }}"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required>
                 </div>
 
                 <!-- Amount -->
@@ -36,10 +35,10 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="amount">
                         Amount
                     </label>
-                    <input name="amount" type="number" step="0.01" id="amount"
-                           value="{{ old('amount') }}"
-                           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                           required>
+                    <input name="amount" type="number" step="0.01" min="0" max="99999999.99" id="amount"
+                        value="{{ old('amount') }}"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required>
                 </div>
 
                 <!-- Description -->
@@ -48,8 +47,8 @@
                         Description (Optional)
                     </label>
                     <textarea name="description" id="description"
-                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                              rows="4">{{ old('description') }}</textarea>
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        rows="4">{{ old('description') }}</textarea>
                 </div>
 
                 <!-- Receipt -->
@@ -57,8 +56,7 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="receipt">
                         Upload Receipt (jpg, png, pdf, max 2MB)
                     </label>
-                    <input name="receipt" type="file" id="receipt"
-                           class="block w-full text-sm text-gray-500
+                    <input name="receipt" type="file" id="receipt" class="block w-full text-sm text-gray-500
                                   file:mr-4 file:py-2 file:px-4
                                   file:rounded-full file:border-0
                                   file:text-sm file:font-semibold
@@ -67,8 +65,7 @@
                 </div>
 
                 <div class="flex items-center">
-                    <button type="submit"
-                            class="text-sm text-gray-600 hover:text-gray-900">
+                    <button type="submit" class="text-sm text-gray-600 hover:text-gray-900">
                         Submit Expense
                     </button>
 
